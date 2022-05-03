@@ -316,8 +316,6 @@ def train(train_loader: Any, epoch: int, criterion: Any, encoder: Any, decoder: 
         # Zero the gradients
         encoder_optimizer.zero_grad()
         decoder_optimizer.zero_grad()
-        if args.use_intersection:
-            _input = _input[:, :-1, :]
 
         # Encoder
         batch_size = _input.shape[0]
